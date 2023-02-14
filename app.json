@@ -22,13 +22,20 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.mincomk.rpc",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6c0f665a-6807-40d2-a612-1f6d9422516a"
+      }
     }
   }
 }
