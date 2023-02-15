@@ -5,6 +5,7 @@ import {Text, View} from '../components/Themed';
 import Input from "../components/Input";
 import useForm from "../hooks/useForm";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import {useEffect} from "react";
 
 
 export default function SettingsScreen() {

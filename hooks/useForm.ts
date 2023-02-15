@@ -5,16 +5,11 @@ export default function useFormData(onChange: (arg: any) => any, initial: () => 
     const [initialData, setInitialData] = useState<any>({});
 
     useEffect(() => {
-        console.log("UE");
-        const i = initial();
-        if (i instanceof Promise) {
-            i.then((data: any) => {
-                console.log(data);
-                setInitialData(data);
-            });
-        } else {
-            setInitialData(i);
-        }
+        initial().then((data: any) => {
+            setFormData(data);
+            setInitialData(data);
+            onChange(data);
+        });
     }, []);
 
     const handleChangeText = async (name: string, value: string) => {
